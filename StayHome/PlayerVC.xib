@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Lato-Light.ttf">
+            <string>Lato-Light</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PlayerVC" customModule="StayHome" customModuleProvider="target">
+            <connections>
+                <outlet property="barView" destination="wCU-vD-VHi" id="KES-uc-cBf"/>
+                <outlet property="challengeButton" destination="mM8-R7-YHP" id="2li-LX-sCi"/>
+                <outlet property="containerView" destination="QJ9-23-O6c" id="arg-XA-UaA"/>
+                <outlet property="label" destination="wRs-8V-Ugk" id="FG3-1c-p2z"/>
+                <outlet property="removeButton" destination="flV-Uo-TqG" id="TT8-Jd-TTF"/>
+                <outlet property="topConstraint" destination="IVD-RT-W7S" id="y0g-jV-YoP"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QJ9-23-O6c">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="flV-Uo-TqG">
+                    <rect key="frame" x="16" y="805.5" width="382" height="54.5"/>
+                    <color key="backgroundColor" red="0.8125599118098159" green="0.33807036042944788" blue="0.21672498082822086" alpha="0.86386838573619629" colorSpace="custom" customColorSpace="displayP3"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="flV-Uo-TqG" secondAttribute="height" multiplier="7:1" id="GdX-8L-gaY"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Lato-Light" family="Lato" pointSize="20"/>
+                    <state key="normal" title="Remove Friend">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="removeTapped:" destination="-1" eventType="touchUpInside" id="mdu-il-3mW"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mM8-R7-YHP">
+                    <rect key="frame" x="16" y="735" width="382" height="54.5"/>
+                    <color key="backgroundColor" red="0.43422997224005772" green="0.61122969164456231" blue="0.47900890844879246" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="mM8-R7-YHP" secondAttribute="height" multiplier="7:1" id="Fu1-v5-nYN"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Lato-Light" family="Lato" pointSize="20"/>
+                    <state key="normal" title="Challenge!">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="challengeTapped:" destination="-1" eventType="touchUpInside" id="g80-bl-hSg"/>
+                    </connections>
+                </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wCU-vD-VHi" customClass="BarView" customModule="StayHome" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="83"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="wCU-vD-VHi" secondAttribute="height" multiplier="5:1" id="tux-R5-hVv"/>
+                    </constraints>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wRs-8V-Ugk">
+                    <rect key="frame" x="16" y="64" width="382" height="22"/>
+                    <fontDescription key="fontDescription" name="Lato-Light" family="Lato" pointSize="18"/>
+                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="QJ9-23-O6c" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="1Yf-Hr-uRh"/>
+                <constraint firstAttribute="trailing" secondItem="wRs-8V-Ugk" secondAttribute="trailing" constant="16" id="3Is-0W-PZJ"/>
+                <constraint firstItem="wCU-vD-VHi" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="8Xn-3n-Rwm"/>
+                <constraint firstItem="wRs-8V-Ugk" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="Bx5-Oi-gZr"/>
+                <constraint firstItem="wRs-8V-Ugk" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="64" id="IVD-RT-W7S"/>
+                <constraint firstItem="QJ9-23-O6c" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="MpU-Yu-5TA"/>
+                <constraint firstAttribute="bottom" secondItem="QJ9-23-O6c" secondAttribute="bottom" id="UmO-zW-nVQ"/>
+                <constraint firstAttribute="trailing" secondItem="mM8-R7-YHP" secondAttribute="trailing" constant="16" id="Wcs-yF-LnO"/>
+                <constraint firstItem="flV-Uo-TqG" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="ZDP-gU-K2d"/>
+                <constraint firstItem="mM8-R7-YHP" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="aiW-eI-Haj"/>
+                <constraint firstAttribute="trailing" secondItem="wCU-vD-VHi" secondAttribute="trailing" id="daR-F2-ODE"/>
+                <constraint firstItem="wCU-vD-VHi" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="eDH-uK-oSM"/>
+                <constraint firstAttribute="trailing" secondItem="QJ9-23-O6c" secondAttribute="trailing" id="eYO-Fm-9Bz"/>
+                <constraint firstItem="flV-Uo-TqG" firstAttribute="top" secondItem="mM8-R7-YHP" secondAttribute="bottom" constant="16" id="eZi-PF-MYq"/>
+                <constraint firstAttribute="trailing" secondItem="flV-Uo-TqG" secondAttribute="trailing" constant="16" id="hDL-6h-Bt2"/>
+                <constraint firstAttribute="bottom" secondItem="flV-Uo-TqG" secondAttribute="bottom" constant="36" id="kX5-1J-PBr"/>
+            </constraints>
+            <point key="canvasLocation" x="137.68115942028987" y="118.52678571428571"/>
+        </view>
+    </objects>
+</document>
