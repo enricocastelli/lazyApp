@@ -14,7 +14,7 @@
         </array>
     </customFonts>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AnimalView" customModule="StayHome" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AnimalView" customModule="LazyApp" customModuleProvider="target">
             <connections>
                 <outlet property="centerConstraint" destination="4nJ-7d-emU" id="Ffy-Of-nZZ"/>
                 <outlet property="heightConstraint" destination="Kfc-k4-hhK" id="yvT-Jh-JKe"/>

@@ -66,9 +66,8 @@ class AnimalView: NibView, ScreenshotProvider {
         heightConstraint.priority = .low
         UIView.animate(withDuration: 0.3) {
             self.label.transform = CGAffineTransform(scaleX: 0.8, y: 0.8)
-            self.textView.transform = CGAffineTransform(scaleX: 0.8, y: 0.8)
-            self.transform = CGAffineTransform(scaleX: 1.7, y: 1.7)
-            self.shareButton.transform = CGAffineTransform(scaleX: 0.5, y: 0.5)
+            self.transform = CGAffineTransform(scaleX: 1.5, y: 1.5)
+            self.shareButton.transform = CGAffineTransform(scaleX: 0.7, y: 0.7)
             self.originalCenter = self.center
             self.center.y = UIScreen.main.bounds.height/2
             self.layer.borderWidth = 0.1

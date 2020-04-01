@@ -17,6 +17,7 @@ class AddFriendVC: UIViewController, FirestoreProvider, AlertProvider {
     @IBOutlet weak var fieldView: UIView!
     @IBOutlet weak var addButton: UIButton!
     @IBOutlet weak var copyLinkButton: UIButton!
+    @IBOutlet weak var copiedLabel: UILabel!
     @IBOutlet weak var codeLabel: UILabel!
     @IBOutlet weak var successView: UIImageView!
     @IBOutlet weak var inviteStackView: UIStackView!
@@ -83,15 +84,19 @@ class AddFriendVC: UIViewController, FirestoreProvider, AlertProvider {
     }
     
     @IBAction func copyLinkTapped(_ sender: UIButton) {
+        let activityViewController = UIActivityViewController(activityItems: [getID()], applicationActivities: nil)
+        self.present(activityViewController, animated: true, completion: nil)
     }
     
     @IBAction func copyCodeTapped(_ sender: Any) {
         UIPasteboard.general.string = codeLabel.text
-        UIView.animate(withDuration: 0.3, animations: {
-            self.codeLabel.transform = CGAffineTransform(scaleX: 1.3, y: 1.3)
+        UIView.transition(with: copiedLabel, duration: 0.7, options: [.transitionFlipFromTop], animations: {
+            self.copiedLabel.text = "COPIED!"
         }) { (_) in
-            UIView.animate(withDuration: 0.3) {
-                self.codeLabel.transform = CGAffineTransform(scaleX: 1, y: 1)
+            UIView.transition(with: self.copiedLabel, duration: 0.4, options: [.transitionCrossDissolve], animations: {
+                self.copiedLabel.text = " "
+            }) { (_) in
+
             }
         }
     }

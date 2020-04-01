@@ -26,7 +26,6 @@
 		1C27D9652429182F005E8801 /* LazyAnimalCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1C27D9632429182F005E8801 /* LazyAnimalCell.xib */; };
 		1C27D9672429198F005E8801 /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C27D9662429198F005E8801 /* UIImageExtension.swift */; };
 		1C27D9692429319C005E8801 /* NavigationC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C27D9682429319C005E8801 /* NavigationC.swift */; };
-		1C27D96B24293B4C005E8801 /* apple-associted-domains in Resources */ = {isa = PBXBuildFile; fileRef = 1C27D96A24293B4C005E8801 /* apple-associted-domains */; };
 		1C27D97524296276005E8801 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C27D97424296276005E8801 /* Common.swift */; };
 		1C27D97824296351005E8801 /* AnimalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C27D97624296351005E8801 /* AnimalView.swift */; };
 		1C27D97924296351005E8801 /* AnimalView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1C27D97724296351005E8801 /* AnimalView.xib */; };
@@ -111,7 +110,6 @@
 		1C27D9632429182F005E8801 /* LazyAnimalCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LazyAnimalCell.xib; sourceTree = "<group>"; };
 		1C27D9662429198F005E8801 /* UIImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
 		1C27D9682429319C005E8801 /* NavigationC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationC.swift; sourceTree = "<group>"; };
-		1C27D96A24293B4C005E8801 /* apple-associted-domains */ = {isa = PBXFileReference; lastKnownFileType = text; name = "apple-associted-domains"; path = "../../../apple-associted-domains"; sourceTree = "<group>"; };
 		1C27D97424296276005E8801 /* Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
 		1C27D97624296351005E8801 /* AnimalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalView.swift; sourceTree = "<group>"; };
 		1C27D97724296351005E8801 /* AnimalView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AnimalView.xib; sourceTree = "<group>"; };
@@ -295,7 +293,6 @@
 			isa = PBXGroup;
 			children = (
 				1C7828F12427BBDD00DB2CFC /* StayHome.entitlements */,
-				1C27D96A24293B4C005E8801 /* apple-associted-domains */,
 				1C36155B243139F400D51A25 /* GoogleService-Info.plist */,
 				1C27D90D2428C7F8005E8801 /* Fonts */,
 				1C7828C12427BBB400DB2CFC /* AppDelegate.swift */,
@@ -499,7 +496,6 @@
 				1C27D961242914D4005E8801 /* AddFriendVC.xib in Resources */,
 				1C27D956242904AB005E8801 /* RankingCell.xib in Resources */,
 				1C7828CB2427BBB600DB2CFC /* Assets.xcassets in Resources */,
-				1C27D96B24293B4C005E8801 /* apple-associted-domains in Resources */,
 				1CCB59A0242B9F5C00174958 /* ExpandableView.xib in Resources */,
 				1C7828F82427BC2600DB2CFC /* HomeVC.xib in Resources */,
 				1C27D92D2428C825005E8801 /* Lato-Thin.ttf in Resources */,
@@ -835,6 +831,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = StayHome/StayHome.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = L4BGB43YX2;
 				INFOPLIST_FILE = StayHome/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -855,6 +852,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = StayHome/StayHome.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = L4BGB43YX2;
 				INFOPLIST_FILE = StayHome/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
