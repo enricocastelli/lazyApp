@@ -34,7 +34,7 @@ class ExpandableView: NibView {
         imageView.image = LazyAnimal.typeForLevel(player.score).image
         imageView.layer.cornerRadius = 8
         imageView.layer.borderColor = UIColor.black.cgColor
-        imageView.layer.borderWidth = 2
+        imageView.layer.borderWidth = 1
         nameLabel.text = player.name
         subtitleLabel.text = player.score.toString
         let animal = LazyAnimal.typeForLevel(player.score)

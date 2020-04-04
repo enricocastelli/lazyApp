@@ -7,7 +7,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RankingVC" customModule="StayHome" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RankingVC" customModule="LazyApp" customModuleProvider="target">
             <connections>
                 <outlet property="barView" destination="Z5O-zh-VVC" id="Du6-Qd-zm7"/>
                 <outlet property="tableView" destination="1J9-if-jBR" id="Uw5-Jx-8QL"/>
@@ -21,11 +21,11 @@
             <subviews>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="1J9-if-jBR">
                     <rect key="frame" x="16" y="83" width="382" height="779"/>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </tableView>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Z5O-zh-VVC" customClass="BarView" customModule="StayHome" customModuleProvider="target">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Z5O-zh-VVC" customClass="BarView" customModule="LazyApp" customModuleProvider="target">
                     <rect key="frame" x="0.0" y="0.0" width="414" height="83"/>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="Z5O-zh-VVC" secondAttribute="height" multiplier="5:1" id="lsr-hh-hSl"/>
                     </constraints>

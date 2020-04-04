@@ -15,6 +15,7 @@ enum StoreKeys {
     static let name = "name"
     static let startDate = "startDate"
     static let animal = "animal"
+    static let fcmToken = "fcmToken"
 
 }
 
@@ -78,6 +79,15 @@ extension StoreProvider {
     func getAnimal() ->  LazyAnimal? {
         guard let animalIndex = UserDefaults.standard.object(forKey: StoreKeys.animal) as? Int else { return nil }
         return LazyAnimal(rawValue: animalIndex)
+    }
+    
+    func storeFCMToken(_ token: String) {
+        UserDefaults.standard.set(token, forKey: StoreKeys.fcmToken)
+    }
+    
+    
+    func getFCMToken() -> String? {
+        return UserDefaults.standard.object(forKey: StoreKeys.fcmToken) as? String
     }
 }
 

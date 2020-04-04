@@ -10,25 +10,19 @@ import UIKit
 
 extension UIImage {
     
+    static let eagle : UIImage = UIImage(named: "eagle")!
+    static let octopus : UIImage = UIImage(named: "octopus")!
+    static let goat : UIImage = UIImage(named: "goat")!
+    static let owl : UIImage = UIImage(named: "owl")!
     static let panda : UIImage = UIImage(named: "panda")!
-    static let bird : UIImage = UIImage(named: "bird")!
-    static let corgi : UIImage = UIImage(named: "corgi")!
-    static let dog : UIImage = UIImage(named: "dog")!
-    static let frog : UIImage = UIImage(named: "frog")!
-    static let horse : UIImage = UIImage(named: "horse")!
-    static let racoon : UIImage = UIImage(named: "racoon")!
-    static let otter : UIImage = UIImage(named: "otter")!
-    static let koala : UIImage = UIImage(named: "koala")!
-    static let koi : UIImage = UIImage(named: "koi")!
-    static let cat : UIImage = UIImage(named: "cat")!
-    static let meerkat : UIImage = UIImage(named: "meerkat")!
+    static let pangolin : UIImage = UIImage(named: "pangolin")!
     static let sloth : UIImage = UIImage(named: "sloth")!
     static let squirrel : UIImage = UIImage(named: "squirrel")!
-    static let sloth1 : UIImage = UIImage(named: "sloth1")!
-    static let shape : UIImage = UIImage(named: "shape")!
+    static let whale : UIImage = UIImage(named: "whale")!
+    static let turtle : UIImage = UIImage(named: "turtle")!
 
+    static let shark : UIImage = UIImage(named: "shark")!
 
-    
     static let instagram : UIImage = UIImage(named: "ig")!
     
     public func tint(_ tint : UIColor) -> UIImage {

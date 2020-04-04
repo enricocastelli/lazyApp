@@ -14,10 +14,12 @@ func lazyness(steps: Double, distance: Double, startDate: Date) throws -> Double
         let fakeScore = random(min: 0, max: 100) + 0.2
         UserData.shared.score = fakeScore
         return fakeScore}
-    guard var diffInDays = Calendar.current.dateComponents([.day], from: startDate, to: Date()).day else { throw LazyError.wrongDate }
-    diffInDays = diffInDays == 0 ? 1 : diffInDays
-    let average = ((steps/2) + distance)/Double(diffInDays)
-    let score = (1 - (average/20000))*100
+    guard var diffInHours = Calendar.current.dateComponents([.hour], from: startDate, to: Date()).hour else { throw LazyError.wrongDate }
+    diffInHours = diffInHours == 0 ? 1 : diffInHours
+    let average = ((steps/2) + distance)/(Double(diffInHours)/24)
+    var score = (1 - (average/20000))*99.9
+    if score < 0 { score = 0.1 }
+    if score > 100 { score = 99.9 }
     UserData.shared.score = score
     return score
 }
@@ -25,65 +27,53 @@ func lazyness(steps: Double, distance: Double, startDate: Date) throws -> Double
 
 enum LazyAnimal: Int, RemoteConfigProvider {
     
-    case meerkat, bird, horse, racoon, dog, koi, frog, panda, otter, koala, squirrel, corgi, cat, sloth
-    
+    case octopus, goat, eagle, turtle, pangolin, squirrel, owl, whale, panda, sloth
+
     var index: Int {
         return self.rawValue
     }
     
     var color: UIColor {
         switch self {
-        case .meerkat: return UIColor(hex: "FEF8EB")
-        case .bird: return UIColor(hex: "D4F9F0")
-        case .horse: return UIColor(hex: "F0EAD3")
-        case .racoon: return UIColor(hex: "F8DB55")
-        case .dog: return UIColor(hex: "F4B3BE")
-        case .koi: return UIColor(hex: "94EEFD")
-        case .frog: return UIColor(hex: "7EB9A8")
+        case .octopus: return UIColor(hex: "FEF8EB")
+        case .goat: return UIColor(hex: "D4F9F0")
+        case .eagle: return UIColor(hex: "F0EAD3")
+        case .squirrel: return UIColor(hex: "F8DB55")
+        case .turtle: return UIColor(hex: "F4B3BE")
+        case .owl: return UIColor(hex: "94EEFD")
+        case .pangolin: return UIColor(hex: "7EB9A8")
+        case .whale: return UIColor(hex: "AEECE4")
         case .panda: return UIColor(hex: "CCFBA3")
-        case .otter: return UIColor(hex: "AEECE4")
-        case .koala: return UIColor(hex: "EEEADB")
-        case .squirrel: return UIColor(hex: "D3E8DF")
-        case .corgi: return UIColor(hex: "ACEDF4")
-        case .cat: return UIColor(hex: "F7D0C4")
-        case .sloth: return UIColor(hex: "FCEBB6")
+        case .sloth: return UIColor(hex: "EEEADB")
         }
     }
     
     var image: UIImage {
         switch self {
-        case .meerkat: return UIImage.meerkat
-        case .bird: return UIImage.bird
-        case .horse: return UIImage.horse
-        case .racoon: return UIImage.racoon
-        case .dog: return UIImage.dog
-        case .koi: return UIImage.koi
-        case .frog: return UIImage.frog
-        case .panda: return UIImage.panda
-        case .otter: return UIImage.otter
-        case .koala: return UIImage.koala
+        case .octopus: return UIImage.octopus
+        case .goat: return UIImage.goat
+        case .eagle: return UIImage.eagle
         case .squirrel: return UIImage.squirrel
-        case .corgi: return UIImage.corgi
-        case .cat: return UIImage.cat
+        case .turtle: return UIImage.turtle
+        case .owl: return UIImage.owl
+        case .pangolin: return UIImage.pangolin
+        case .whale: return UIImage.whale
+        case .panda: return UIImage.panda
         case .sloth: return UIImage.sloth
         }
     }
     
     var name: String {
         switch self {
-        case .meerkat: return "Proactive Meerkat"
-        case .bird: return "Delivering Stork"
-        case .horse: return "Racing Horse"
-        case .racoon: return "Happy Racoon"
-        case .dog: return "Busy Doggo"
-        case .koi: return "Cool Koi"
-        case .frog: return "Yoga Frog"
-        case .panda: return "Afterwork Panda"
-        case .otter: return "Floating Otter"
-        case .koala: return "Napping Koala"
-        case .squirrel: return "Netflix Squirrel"
-        case .corgi: return "Sunday Corgi"
-        case .cat: return "Passed Out Cat"
+        case .octopus: return "Busy Octopus"
+        case .goat: return "Proactive Goat"
+        case .eagle: return "Mother Eagle"
+        case .turtle: return "Social Turtle"
+        case .pangolin: return "Happy Pangolin"
+        case .squirrel: return "Munching Squirrel"
+        case .owl: return "Sleepy Owl"
+        case .whale: return "Zen Whale"
+        case .panda: return "Napping Panda"
         case .sloth: return "Granpa Sloth"
         }
     }
@@ -92,38 +82,28 @@ enum LazyAnimal: Int, RemoteConfigProvider {
         return getDesc(name)
     }
     
-    static let array: [LazyAnimal] = [.meerkat,
-                                  .bird,
-                                  .horse,
-                                  .racoon,
-                                  .dog,
-                                  .koi,
-                                  .frog,
-                                  .panda,
-                                  .otter,
-                                  .koala,
-                                  .squirrel,
-                                  .corgi,
-                                  .cat,
-                                  .sloth]
+    static let array: [LazyAnimal] = {
+        var arr = [LazyAnimal]()
+        for index in 0...9 {
+            let animal = LazyAnimal(rawValue: index)!
+            arr.append(animal)
+        }
+        return arr
+    }()
     
     static func typeForLevel(_ level: Double) -> LazyAnimal {
         switch level {
-        case _ where level <= 5: return .meerkat
-        case _ where level > 5 && level <= 12: return .bird
-        case _ where level > 12 && level <= 19: return .horse
-        case _ where level > 19 && level <= 27: return .racoon
-        case _ where level > 27 && level <= 34: return .dog
-        case _ where level > 34 && level <= 42: return .koi
-        case _ where level > 42 && level <= 48: return .frog
-        case _ where level > 48 && level <= 56: return .panda
-        case _ where level > 56 && level <= 63: return .otter
-        case _ where level > 63 && level <= 71: return .koala
-        case _ where level > 71 && level <= 79: return .squirrel
-        case _ where level > 79 && level <= 87: return .corgi
-        case _ where level > 87 && level <= 95: return .cat
-        case _ where level > 95: return .sloth
-        default: return .koi
+        case _ where level <= 10: return .octopus
+        case _ where level > 10 && level <= 20: return .goat
+        case _ where level > 20 && level <= 30: return .eagle
+        case _ where level > 30 && level <= 40: return .turtle
+        case _ where level > 40 && level <= 50: return .pangolin
+        case _ where level > 50 && level <= 60: return .squirrel
+        case _ where level > 60 && level <= 70: return .owl
+        case _ where level > 70 && level <= 80: return .whale
+        case _ where level > 80 && level <= 90: return .panda
+        case _ where level > 90: return .sloth
+        default: return .owl
         }
     }
 }

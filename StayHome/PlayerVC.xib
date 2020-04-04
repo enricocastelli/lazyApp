@@ -11,7 +11,7 @@
         </array>
     </customFonts>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PlayerVC" customModule="StayHome" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PlayerVC" customModule="LazyApp" customModuleProvider="target">
             <connections>
                 <outlet property="barView" destination="wCU-vD-VHi" id="KES-uc-cBf"/>
                 <outlet property="challengeButton" destination="mM8-R7-YHP" id="2li-LX-sCi"/>
@@ -47,7 +47,7 @@
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mM8-R7-YHP">
                     <rect key="frame" x="16" y="735" width="382" height="54.5"/>
-                    <color key="backgroundColor" red="0.43422997224005772" green="0.61122969164456231" blue="0.47900890844879246" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <color key="backgroundColor" red="0.43529411764705883" green="0.61176470588235299" blue="0.47843137254901957" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="mM8-R7-YHP" secondAttribute="height" multiplier="7:1" id="Fu1-v5-nYN"/>
                     </constraints>
@@ -59,7 +59,7 @@
                         <action selector="challengeTapped:" destination="-1" eventType="touchUpInside" id="g80-bl-hSg"/>
                     </connections>
                 </button>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wCU-vD-VHi" customClass="BarView" customModule="StayHome" customModuleProvider="target">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wCU-vD-VHi" customClass="BarView" customModule="LazyApp" customModuleProvider="target">
                     <rect key="frame" x="0.0" y="0.0" width="414" height="83"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>

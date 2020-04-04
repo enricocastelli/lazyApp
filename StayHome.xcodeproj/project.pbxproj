@@ -36,7 +36,6 @@
 		1C3615562430ED5E00D51A25 /* RoundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C3615552430ED5E00D51A25 /* RoundView.swift */; };
 		1C361559243101BB00D51A25 /* ChallengeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C361557243101BB00D51A25 /* ChallengeVC.swift */; };
 		1C36155A243101BB00D51A25 /* ChallengeVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1C361558243101BB00D51A25 /* ChallengeVC.xib */; };
-		1C36155C243139F400D51A25 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1C36155B243139F400D51A25 /* GoogleService-Info.plist */; };
 		1C5BD73C242A3E46009C0A76 /* BarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C5BD73B242A3E46009C0A76 /* BarView.swift */; };
 		1C5BD73E242A474E009C0A76 /* ScreenshotProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C5BD73D242A474E009C0A76 /* ScreenshotProvider.swift */; };
 		1C5BD740242A486B009C0A76 /* ShareView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C5BD73F242A486B009C0A76 /* ShareView.swift */; };
@@ -56,6 +55,7 @@
 		1C883AF82427CAD6003FF481 /* CounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C883AF72427CAD5003FF481 /* CounterView.swift */; };
 		1C883AFA2427CAF2003FF481 /* CounterLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C883AF92427CAF2003FF481 /* CounterLabel.swift */; };
 		1C883AFC2427CB3F003FF481 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C883AFB2427CB3F003FF481 /* Extension.swift */; };
+		1C9C3FDF2435F5A6001ABFEE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1C9C3FDE2435F5A6001ABFEE /* GoogleService-Info.plist */; };
 		1CA223CC2427E15900F8A674 /* FirestoreProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CA223CB2427E15900F8A674 /* FirestoreProvider.swift */; };
 		1CA223CE2427E59600F8A674 /* StoreProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CA223CD2427E59600F8A674 /* StoreProvider.swift */; };
 		1CA223D02427EAAE00F8A674 /* KeyboardProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CA223CF2427EAAE00F8A674 /* KeyboardProvider.swift */; };
@@ -69,6 +69,9 @@
 		1CCB59A4242BB32600174958 /* ExpandableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CCB59A3242BB32600174958 /* ExpandableView.swift */; };
 		1CCB59AA242BB52500174958 /* PlayerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CCB59A8242BB52500174958 /* PlayerVC.swift */; };
 		1CCB59AB242BB52500174958 /* PlayerVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1CCB59A9242BB52500174958 /* PlayerVC.xib */; };
+		1CD2469D243722ED00FC0E59 /* GIFAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CD2469C243722EC00FC0E59 /* GIFAnimator.swift */; };
+		1CD2469F2437D2FC00FC0E59 /* PushProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CD2469E2437D2FC00FC0E59 /* PushProvider.swift */; };
+		1CD246A1243899A700FC0E59 /* ChallengeProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CD246A0243899A700FC0E59 /* ChallengeProvider.swift */; };
 		34663584D125F4D18A6675CD /* Pods_StayHome.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 722E344D5BFF484FFCA21133 /* Pods_StayHome.framework */; };
 		76A5E62B9B9B1CC8D1FDC870 /* Pods_StayHome_StayHomeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3832B7667E1D69E7C92A487 /* Pods_StayHome_StayHomeUITests.framework */; };
 /* End PBXBuildFile section */
@@ -120,7 +123,6 @@
 		1C3615552430ED5E00D51A25 /* RoundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundView.swift; sourceTree = "<group>"; };
 		1C361557243101BB00D51A25 /* ChallengeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeVC.swift; sourceTree = "<group>"; };
 		1C361558243101BB00D51A25 /* ChallengeVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChallengeVC.xib; sourceTree = "<group>"; };
-		1C36155B243139F400D51A25 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		1C5BD73B242A3E46009C0A76 /* BarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarView.swift; sourceTree = "<group>"; };
 		1C5BD73D242A474E009C0A76 /* ScreenshotProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenshotProvider.swift; sourceTree = "<group>"; };
 		1C5BD73F242A486B009C0A76 /* ShareView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareView.swift; sourceTree = "<group>"; };
@@ -139,7 +141,6 @@
 		1C7828DF2427BBB600DB2CFC /* StayHomeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StayHomeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C7828E32427BBB600DB2CFC /* StayHomeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StayHomeUITests.swift; sourceTree = "<group>"; };
 		1C7828E52427BBB600DB2CFC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1C7828F12427BBDD00DB2CFC /* StayHome.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = StayHome.entitlements; sourceTree = "<group>"; };
 		1C7828F32427BBDD00DB2CFC /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 		1C7828F52427BC2600DB2CFC /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		1C7828F62427BC2600DB2CFC /* HomeVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeVC.xib; sourceTree = "<group>"; };
@@ -147,6 +148,7 @@
 		1C883AF72427CAD5003FF481 /* CounterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterView.swift; sourceTree = "<group>"; };
 		1C883AF92427CAF2003FF481 /* CounterLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterLabel.swift; sourceTree = "<group>"; };
 		1C883AFB2427CB3F003FF481 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		1C9C3FDE2435F5A6001ABFEE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		1CA223CB2427E15900F8A674 /* FirestoreProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreProvider.swift; sourceTree = "<group>"; };
 		1CA223CD2427E59600F8A674 /* StoreProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreProvider.swift; sourceTree = "<group>"; };
 		1CA223CF2427EAAE00F8A674 /* KeyboardProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardProvider.swift; sourceTree = "<group>"; };
@@ -160,6 +162,9 @@
 		1CCB59A3242BB32600174958 /* ExpandableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandableView.swift; sourceTree = "<group>"; };
 		1CCB59A8242BB52500174958 /* PlayerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerVC.swift; sourceTree = "<group>"; };
 		1CCB59A9242BB52500174958 /* PlayerVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlayerVC.xib; sourceTree = "<group>"; };
+		1CD2469C243722EC00FC0E59 /* GIFAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GIFAnimator.swift; sourceTree = "<group>"; };
+		1CD2469E2437D2FC00FC0E59 /* PushProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushProvider.swift; sourceTree = "<group>"; };
+		1CD246A0243899A700FC0E59 /* ChallengeProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeProvider.swift; sourceTree = "<group>"; };
 		23A20E6A1428F13E5D0060F5 /* Pods_StayHomeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StayHomeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		564017A94920CBF5879698BD /* Pods-StayHome-StayHomeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StayHome-StayHomeUITests.debug.xcconfig"; path = "Target Support Files/Pods-StayHome-StayHomeUITests/Pods-StayHome-StayHomeUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		722E344D5BFF484FFCA21133 /* Pods_StayHome.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StayHome.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -239,6 +244,7 @@
 			isa = PBXGroup;
 			children = (
 				1C883AF72427CAD5003FF481 /* CounterView.swift */,
+				1CD2469C243722EC00FC0E59 /* GIFAnimator.swift */,
 				1C883AF92427CAF2003FF481 /* CounterLabel.swift */,
 				1C5BD73B242A3E46009C0A76 /* BarView.swift */,
 				1C5BD73F242A486B009C0A76 /* ShareView.swift */,
@@ -260,8 +266,10 @@
 				1C361551242FF5BA00D51A25 /* TextPresenter.swift */,
 				1C765DD7242A0F9C0062E412 /* AlertProvider.swift */,
 				1CA223CB2427E15900F8A674 /* FirestoreProvider.swift */,
+				1CD2469E2437D2FC00FC0E59 /* PushProvider.swift */,
 				1CA223CD2427E59600F8A674 /* StoreProvider.swift */,
 				1CA223D12427EE8100F8A674 /* HealthProvider.swift */,
+				1CD246A0243899A700FC0E59 /* ChallengeProvider.swift */,
 				1C14F27B243253A5009BB5E5 /* RemoteConfigProvider.swift */,
 			);
 			path = Providers;
@@ -292,8 +300,7 @@
 		1C7828C02427BBB400DB2CFC /* StayHome */ = {
 			isa = PBXGroup;
 			children = (
-				1C7828F12427BBDD00DB2CFC /* StayHome.entitlements */,
-				1C36155B243139F400D51A25 /* GoogleService-Info.plist */,
+				1C9C3FDE2435F5A6001ABFEE /* GoogleService-Info.plist */,
 				1C27D90D2428C7F8005E8801 /* Fonts */,
 				1C7828C12427BBB400DB2CFC /* AppDelegate.swift */,
 				1C27D9682429319C005E8801 /* NavigationC.swift */,
@@ -382,6 +389,7 @@
 				1C7828BB2427BBB400DB2CFC /* Frameworks */,
 				1C7828BC2427BBB400DB2CFC /* Resources */,
 				C7CE151D642C237A00345A71 /* [CP] Embed Pods Frameworks */,
+				1C9C3FDD2435D03A001ABFEE /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -492,11 +500,11 @@
 				1C27D9372428D837005E8801 /* TabView.xib in Resources */,
 				1C27D9312428C825005E8801 /* Lato-Hairline.ttf in Resources */,
 				1CCB59AB242BB52500174958 /* PlayerVC.xib in Resources */,
-				1C36155C243139F400D51A25 /* GoogleService-Info.plist in Resources */,
 				1C27D961242914D4005E8801 /* AddFriendVC.xib in Resources */,
 				1C27D956242904AB005E8801 /* RankingCell.xib in Resources */,
 				1C7828CB2427BBB600DB2CFC /* Assets.xcassets in Resources */,
 				1CCB59A0242B9F5C00174958 /* ExpandableView.xib in Resources */,
+				1C9C3FDF2435F5A6001ABFEE /* GoogleService-Info.plist in Resources */,
 				1C7828F82427BC2600DB2CFC /* HomeVC.xib in Resources */,
 				1C27D92D2428C825005E8801 /* Lato-Thin.ttf in Resources */,
 			);
@@ -519,6 +527,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		1C9C3FDD2435D03A001ABFEE /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/FirebaseCrashlytics/run\"\n\n";
+		};
 		5B932722D1687BC7BC133EFF /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -638,6 +663,7 @@
 				1CA223D02427EAAE00F8A674 /* KeyboardProvider.swift in Sources */,
 				1C14F27C243253A5009BB5E5 /* RemoteConfigProvider.swift in Sources */,
 				1CA223CC2427E15900F8A674 /* FirestoreProvider.swift in Sources */,
+				1CD2469D243722ED00FC0E59 /* GIFAnimator.swift in Sources */,
 				1C8385E1242D4B300036B573 /* DateExtension.swift in Sources */,
 				1C765DD8242A0F9C0062E412 /* AlertProvider.swift in Sources */,
 				1C27D9642429182F005E8801 /* LazyAnimalCell.swift in Sources */,
@@ -650,6 +676,7 @@
 				1C27D960242914D4005E8801 /* AddFriendVC.swift in Sources */,
 				1C5BD73E242A474E009C0A76 /* ScreenshotProvider.swift in Sources */,
 				1C27D97824296351005E8801 /* AnimalView.swift in Sources */,
+				1CD246A1243899A700FC0E59 /* ChallengeProvider.swift in Sources */,
 				1C361552242FF5BA00D51A25 /* TextPresenter.swift in Sources */,
 				1CA223CE2427E59600F8A674 /* StoreProvider.swift in Sources */,
 				1C5BD73C242A3E46009C0A76 /* BarView.swift in Sources */,
@@ -657,6 +684,7 @@
 				1CA223DB2428137C00F8A674 /* RankingVC.swift in Sources */,
 				1C765DD6242A0DEB0062E412 /* UserData.swift in Sources */,
 				1C765DD0242A01A50062E412 /* LazyModel.swift in Sources */,
+				1CD2469F2437D2FC00FC0E59 /* PushProvider.swift in Sources */,
 				1C765DDA242A100A0062E412 /* ErrorHandling.swift in Sources */,
 				1C7828F72427BC2600DB2CFC /* HomeVC.swift in Sources */,
 				1C36154F242FB73C00D51A25 /* OnboardingVC.swift in Sources */,
@@ -829,9 +857,10 @@
 			baseConfigurationReference = B10FE7D209BCE2E915576BBD /* Pods-StayHome.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = StayHome/StayHome.entitlements;
+				CODE_SIGN_ENTITLEMENTS = StayHome/LazyAppRelease.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = L4BGB43YX2;
 				INFOPLIST_FILE = StayHome/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -840,6 +869,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = EC.lazyApp;
 				PRODUCT_NAME = LazyApp;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -850,9 +880,10 @@
 			baseConfigurationReference = AFDCD789E1297D9238CAA5DC /* Pods-StayHome.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = StayHome/StayHome.entitlements;
+				CODE_SIGN_ENTITLEMENTS = StayHome/LazyAppRelease.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = L4BGB43YX2;
 				INFOPLIST_FILE = StayHome/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -861,6 +892,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = EC.lazyApp;
 				PRODUCT_NAME = LazyApp;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};

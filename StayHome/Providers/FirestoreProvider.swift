@@ -9,7 +9,7 @@
 import Firebase
 import FirebaseFirestore
 
-protocol FirestoreProvider: HealthProvider {}
+protocol FirestoreProvider: HealthProvider, PushProvider {}
 
 extension FirestoreProvider  {
     
@@ -40,6 +40,7 @@ extension FirestoreProvider  {
             player.friendsPending = updatedFriends
             self.updateStats(documentID: id, player: player, success: {
                 self.addFriendToSelf(id, success: success, failure: failure)
+                self.sendFriendsPush(id)
             }, failure: failure)
         }
     }
@@ -146,11 +147,26 @@ extension FirestoreProvider  {
         }
     }
     
+    func saveFCMToken() {
+        let token = getFCMToken() ?? "No token found"
+        Firestore.firestore().collection("tokens").document(getID()).setData(["token" : token])
+    }
+        
     // MARK: - CHALLENGES
     
-    func createChallenge(_ id: String, challenger: String, startingDate: String, endingDate: String) {
-        let challengeModel = Challenge(id: id + challenger, playerID: id, challengerID: challenger, score1: 0, score2: 0, startingDate: startingDate, endingDate: endingDate)
-        challenge().addDocument(data: challengeModel.toDictionary() ?? [:])
+    func createChallenge(_ challenger: String, endingDate: ChallengeDuration) {
+        let challengeID =  getID() + challenger
+        let challengeModel = Challenge(id: challengeID, playerID: getID(), challengerID: challenger, score1: 0, score2: 0, startingDate: Timestamp(date: Date()), endingDate: endingDate.ending())
+        challenge().document(challengeID).setData(challengeModel.toDictionary())
+        sendChallengePush(challengeID, friendID: challenger, endingTime: endingDate)
+        sendChallengeLocal()
     }
+    
+    func getChallenge(_ challenger: String, endingDate: ChallengeDuration) {
+
+        
+    }
+    
+    
 }
 

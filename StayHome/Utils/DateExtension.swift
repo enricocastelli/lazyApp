@@ -142,6 +142,12 @@ extension Date {
           default: return .Day
           }
       }
+    
+    func toString(_ format: String = "yyyy-MM-dd'T'HH:mm'Z'") -> String {
+        let dateFormat = DateFormatter()
+        dateFormat.dateFormat = format
+        return dateFormat.string(from: self)
+    }
 }
 
 extension Calendar {

@@ -8,24 +8,19 @@
 
 import UIKit
 
-class ChallengeVC: UIViewController {
+class ChallengeVC: UIViewController, FirestoreProvider {
 
-    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var fromLabel: UILabel!
     @IBOutlet weak var toLabel: UILabel!
-    
-    @IBOutlet weak var fromField: UITextField!
     @IBOutlet weak var toField: UITextField!
     
     @IBOutlet weak var challengeButton: UIButton!
     
+    var imageView: Animator!
     var pickerView = UIPickerView()
-    var fromDates = ["Now", "Tomorrow"]
-    var toDates = ["End of the day", "Tomorrow", "Next week"]
-    var textFieldOnFocus: UITextField?
-    var selectedFromDate: String = "Now"
-    var selectedToDate: String = "End of the day"
+    var toDates: [ChallengeDuration] = [ChallengeDuration.EndOfDay, .Tomorrow, .NextWeek]
+    var selectedToDate: ChallengeDuration = .EndOfDay
     
     let player: Player
 
@@ -36,26 +31,31 @@ class ChallengeVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setFields()
+        self.imageView = Animator(containerView.frame, imageName: "shark", count: 10, frameTime: 0.1)
+        containerView.addContentView(imageView)
+        imageView.start()
+        setField()
         challengeButton.layer.cornerRadius = 8
         pickerView.delegate = self
         pickerView.dataSource = self
-        titleLabel.text = "You are about to invite \(player.name) to a lazy challenge!"
+        titleLabel.text = "You are about to invite \n\(player.name)\n to a lazy challenge!"
         imageView.transform = CGAffineTransform(translationX: view.frame.width, y: 0)
     }
     
-    private func setFields() {
-        fromField.inputView = pickerView
-        fromField.inputAccessoryView = getToolBar()
+    deinit {
+        imageView.stop()
+    }
+    
+    private func setField() {
+        toField.tintColor = .clear
         toField.inputView = pickerView
         toField.inputAccessoryView = getToolBar()
-        fromField.text = selectedFromDate
-        toField.text = selectedToDate
+        toField.text = selectedToDate.rawValue
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        UIView.animate(withDuration: 0.5) {
+        UIView.animate(withDuration: 1.5) {
             self.imageView.transform = CGAffineTransform.identity
         }
     }
@@ -78,7 +78,7 @@ class ChallengeVC: UIViewController {
     }
     
     @IBAction func challengeTapped(_ sender: UIButton) {
-        
+        createChallenge(player.id, endingDate: selectedToDate)
     }
     
     required init?(coder: NSCoder) {
@@ -87,10 +87,6 @@ class ChallengeVC: UIViewController {
 }
 
 extension ChallengeVC: UITextFieldDelegate {
-    
-    func textFieldDidBeginEditing(_ textField: UITextField) {
-        textFieldOnFocus = textField
-    }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
@@ -101,7 +97,7 @@ extension ChallengeVC: UITextFieldDelegate {
 extension ChallengeVC: UIPickerViewDelegate, UIPickerViewDataSource {
 
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return textFieldOnFocus == fromField ? fromDates.count : toDates.count
+        return toDates.count
     }
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
@@ -109,16 +105,11 @@ extension ChallengeVC: UIPickerViewDelegate, UIPickerViewDataSource {
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        if textFieldOnFocus == fromField {
-            selectedFromDate = fromDates[row]
-            fromField.text = selectedFromDate
-        } else {
-            selectedToDate = toDates[row]
-            toField.text = selectedToDate
-        }
+        selectedToDate = toDates[row]
+        toField.text = selectedToDate.rawValue
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return textFieldOnFocus == fromField ? fromDates[row] : toDates[row]
+        return toDates[row].rawValue
     }
 }

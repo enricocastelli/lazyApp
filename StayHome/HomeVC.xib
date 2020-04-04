@@ -66,7 +66,7 @@
                         </view>
                         <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="Rhl-eM-CAY">
                             <rect key="frame" x="0.0" y="212" width="414" height="491"/>
-                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="40" id="JMT-Ru-O97">
                                 <size key="itemSize" width="50" height="46"/>
                                 <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -86,7 +86,7 @@
                 </stackView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5gQ-xw-h7n" customClass="TabView" customModule="LazyApp" customModuleProvider="target">
                     <rect key="frame" x="0.0" y="797" width="414" height="83"/>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="5gQ-xw-h7n" secondAttribute="height" multiplier="5:1" id="qWb-cR-ktB"/>
                     </constraints>

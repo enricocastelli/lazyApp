@@ -16,42 +16,51 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AnimalView" customModule="LazyApp" customModuleProvider="target">
             <connections>
-                <outlet property="centerConstraint" destination="4nJ-7d-emU" id="Ffy-Of-nZZ"/>
-                <outlet property="heightConstraint" destination="Kfc-k4-hhK" id="yvT-Jh-JKe"/>
+                <outlet property="centerConstraint" destination="uKr-rK-ODN" id="JFF-xh-oXN"/>
+                <outlet property="descLabel" destination="1Ny-nn-EdI" id="aN1-Qw-aRI"/>
+                <outlet property="heightConstraint" destination="fEE-Hi-w3y" id="ZM8-Ob-kHv"/>
                 <outlet property="imageView" destination="AiR-gq-WAb" id="2t2-G8-Xdy"/>
                 <outlet property="label" destination="8Mb-5n-U0a" id="8AT-IA-X86"/>
+                <outlet property="labelHeightConstraint" destination="U74-bS-qmK" id="2bl-bu-KOg"/>
                 <outlet property="shareButton" destination="ifQ-rD-Dlh" id="IDV-h0-M9F"/>
-                <outlet property="textView" destination="iyt-XQ-O6E" id="VG5-0J-z2o"/>
+                <outlet property="topLabel" destination="HU8-yr-aL8" id="xwg-OV-xQb"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
-            <rect key="frame" x="0.0" y="0.0" width="353" height="527"/>
+            <rect key="frame" x="0.0" y="0.0" width="498" height="946"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Labe Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Mb-5n-U0a">
-                    <rect key="frame" x="8" y="495" width="337" height="24"/>
-                    <fontDescription key="fontDescription" name="Lato-Light" family="Lato" pointSize="20"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalCompressionResistancePriority="749" image="panda" translatesAutoresizingMaskIntoConstraints="NO" id="AiR-gq-WAb">
-                    <rect key="frame" x="0.0" y="0.0" width="353" height="487"/>
+                    <rect key="frame" x="0.0" y="0.0" width="498" height="600"/>
                     <color key="tintColor" red="0.80000000000000004" green="0.98431372549999996" blue="0.63921568630000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                 </imageView>
-                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" editable="NO" text="de" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="iyt-XQ-O6E">
-                    <rect key="frame" x="8" y="527" width="337" height="0.0"/>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Labe Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HU8-yr-aL8">
+                    <rect key="frame" x="8" y="888" width="482" height="0.0"/>
                     <constraints>
-                        <constraint firstAttribute="height" priority="999" id="Kfc-k4-hhK"/>
+                        <constraint firstAttribute="height" priority="999" id="U74-bS-qmK"/>
                     </constraints>
-                    <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
-                    <fontDescription key="fontDescription" name="Lato-Thin" family="Lato" pointSize="14"/>
-                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                    <dataDetectorType key="dataDetectorTypes" link="YES"/>
-                </textView>
+                    <fontDescription key="fontDescription" name="Lato-Thin" family="Lato" pointSize="10"/>
+                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Labe Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Mb-5n-U0a">
+                    <rect key="frame" x="8" y="890" width="482" height="24"/>
+                    <fontDescription key="fontDescription" name="Lato-Light" family="Lato" pointSize="20"/>
+                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Labe Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Ny-nn-EdI" userLabel="desc">
+                    <rect key="frame" x="9" y="930" width="480" height="0.0"/>
+                    <constraints>
+                        <constraint firstAttribute="height" priority="999" id="fEE-Hi-w3y"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Lato-Light" family="Lato" pointSize="14"/>
+                    <color key="textColor" red="0.087327453989999998" green="0.091581192480000004" blue="0.11957199" alpha="0.87805550229999996" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
                 <button opaque="NO" alpha="0.59999999999999998" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ifQ-rD-Dlh">
-                    <rect key="frame" x="310" y="0.0" width="43" height="46"/>
+                    <rect key="frame" x="455" y="0.0" width="43" height="46"/>
                     <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <inset key="contentEdgeInsets" minX="16" minY="8" maxX="8" maxY="16"/>
                     <state key="normal" image="square.and.arrow.up" catalog="system"/>
@@ -63,26 +72,29 @@
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="AiR-gq-WAb" secondAttribute="trailing" id="05P-O5-gkI"/>
-                <constraint firstItem="iyt-XQ-O6E" firstAttribute="top" secondItem="8Mb-5n-U0a" secondAttribute="bottom" constant="8" id="4mj-mw-MN4"/>
-                <constraint firstItem="8Mb-5n-U0a" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" priority="1" id="4nJ-7d-emU"/>
                 <constraint firstItem="AiR-gq-WAb" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="5XW-uc-JYy"/>
+                <constraint firstAttribute="bottom" secondItem="1Ny-nn-EdI" secondAttribute="bottom" constant="16" id="Cfo-vg-k41"/>
                 <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="8Mb-5n-U0a" secondAttribute="bottom" constant="8" id="DUm-en-2rR"/>
-                <constraint firstAttribute="bottom" secondItem="iyt-XQ-O6E" secondAttribute="bottom" id="ECm-og-ThP"/>
+                <constraint firstItem="HU8-yr-aL8" firstAttribute="top" relation="greaterThanOrEqual" secondItem="AiR-gq-WAb" secondAttribute="bottom" constant="16" id="HyX-5Y-dPp"/>
+                <constraint firstAttribute="trailing" secondItem="HU8-yr-aL8" secondAttribute="trailing" constant="8" id="P8E-c9-Vf2"/>
                 <constraint firstItem="ifQ-rD-Dlh" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="T2z-av-hzT"/>
-                <constraint firstItem="iyt-XQ-O6E" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="cO1-Ys-wI1"/>
+                <constraint firstItem="1Ny-nn-EdI" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="9" id="XAy-vK-hiL"/>
+                <constraint firstAttribute="trailing" secondItem="1Ny-nn-EdI" secondAttribute="trailing" constant="9" id="YPv-BX-0Ko"/>
                 <constraint firstItem="AiR-gq-WAb" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="eCL-cC-6j7"/>
+                <constraint firstItem="1Ny-nn-EdI" firstAttribute="top" secondItem="8Mb-5n-U0a" secondAttribute="bottom" constant="16" id="jsx-7U-VdC"/>
                 <constraint firstAttribute="trailing" secondItem="ifQ-rD-Dlh" secondAttribute="trailing" id="nIQ-h9-5gu"/>
+                <constraint firstItem="8Mb-5n-U0a" firstAttribute="top" secondItem="HU8-yr-aL8" secondAttribute="bottom" constant="2" id="ozk-Cm-YxI"/>
                 <constraint firstItem="8Mb-5n-U0a" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="tP6-tn-H7W"/>
                 <constraint firstAttribute="trailing" secondItem="8Mb-5n-U0a" secondAttribute="trailing" constant="8" id="u5R-JR-T5X"/>
-                <constraint firstItem="8Mb-5n-U0a" firstAttribute="top" secondItem="AiR-gq-WAb" secondAttribute="bottom" constant="8" id="xvY-9I-NBt"/>
-                <constraint firstAttribute="trailing" secondItem="iyt-XQ-O6E" secondAttribute="trailing" constant="8" id="ygw-Qb-mnm"/>
+                <constraint firstItem="HU8-yr-aL8" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" priority="1" constant="64" id="uKr-rK-ODN"/>
+                <constraint firstItem="HU8-yr-aL8" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="vaO-4Y-OC9"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="93.478260869565219" y="265.51339285714283"/>
+            <point key="canvasLocation" x="-11.594202898550726" y="405.80357142857139"/>
         </view>
     </objects>
     <resources>
-        <image name="panda" width="1600" height="1200"/>
+        <image name="panda" width="800" height="600"/>
         <image name="square.and.arrow.up" catalog="system" width="56" height="64"/>
     </resources>
 </document>

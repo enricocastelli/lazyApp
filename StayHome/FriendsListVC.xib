@@ -7,7 +7,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FriendsListVC" customModule="StayHome" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FriendsListVC" customModule="LazyApp" customModuleProvider="target">
             <connections>
                 <outlet property="barView" destination="qnB-w7-8wH" id="Cwt-k9-9pg"/>
                 <outlet property="emptyLabel" destination="nxw-vF-abw" id="gDU-Sm-sEh"/>
@@ -24,24 +24,28 @@
             <subviews>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="oTQ-hx-0v6">
                     <rect key="frame" x="0.0" y="143" width="414" height="719"/>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <connections>
                         <outlet property="dataSource" destination="-1" id="ljw-rr-TL8"/>
                         <outlet property="delegate" destination="-1" id="Wco-oB-1j3"/>
                     </connections>
                 </tableView>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qnB-w7-8wH" customClass="BarView" customModule="StayHome" customModuleProvider="target">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qnB-w7-8wH" customClass="BarView" customModule="LazyApp" customModuleProvider="target">
                     <rect key="frame" x="0.0" y="0.0" width="414" height="83"/>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="qnB-w7-8wH" secondAttribute="height" multiplier="5:1" id="6yr-v4-KTj"/>
                     </constraints>
                 </view>
                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mYZ-fw-umI">
                     <rect key="frame" x="81" y="91" width="252" height="36"/>
+                    <color key="backgroundColor" red="0.895226226993865" green="0.89079275306748462" blue="0.90638180598159512" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="mYZ-fw-umI" secondAttribute="height" multiplier="7:1" id="Lnv-5J-wjo"/>
                     </constraints>
+                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
@@ -76,7 +80,7 @@
                             <nil key="highlightedColor"/>
                         </label>
                     </subviews>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstAttribute="trailing" secondItem="nxw-vF-abw" secondAttribute="trailing" constant="20" id="B9c-HL-BtP"/>
                         <constraint firstItem="nxw-vF-abw" firstAttribute="leading" secondItem="QDF-MB-cZD" secondAttribute="leading" constant="20" id="Mh2-Cl-aA9"/>

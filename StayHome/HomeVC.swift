@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class HomeVC: UIViewController, FirestoreProvider, HealthProvider, AlertProvider, TextPresenter, RemoteConfigProvider {
 
@@ -158,6 +159,13 @@ class HomeVC: UIViewController, FirestoreProvider, HealthProvider, AlertProvider
     }
     
     func openGames() {
+        InstanceID.instanceID().instanceID { (result, error) in
+          if let error = error {
+            print("Error fetching remote instance ID: \(error)")
+          } else if let result = result {
+            print("Remote instance ID token: \(result.token)")
+          }
+        }
         navigation.push(FriendsListVC())
     }
     

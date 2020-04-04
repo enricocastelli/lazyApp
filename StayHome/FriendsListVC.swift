@@ -39,6 +39,7 @@ class FriendsListVC: UIViewController, FirestoreProvider, AlertProvider {
         tableView.contentInset = UIEdgeInsets(top: 16, left: 0, bottom: 16, right: 0)
         tableView.separatorStyle = .none
         tableView.register(UINib(nibName: RankingCell.identifier, bundle: nil), forCellReuseIdentifier: RankingCell.identifier)
+        tableView.backgroundColor = .white
     }
     
     private func setBarView(){

@@ -6,7 +6,9 @@ target 'StayHome' do
   use_frameworks!
   pod 'Firebase/Firestore'
   pod 'Firebase/RemoteConfig'
-
+  pod 'Firebase/Messaging'
+  pod 'Firebase/Analytics'
+  pod 'Firebase/Crashlytics'
   # Pods for StayHome
 
   target 'StayHomeTests' do

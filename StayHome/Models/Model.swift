@@ -24,9 +24,32 @@ struct Challenge {
     let challengerID: String
     let score1: Double
     let score2: Double
-    var startingDate: String
-    var endingDate: String
+    var startingDate: Timestamp
+    var endingDate: Timestamp
 }
+
+
+enum ChallengeDuration: String {
+    case EndOfDay, Tomorrow, NextWeek
+    
+    func ending() -> Timestamp {
+        return Timestamp(date: date())
+    }
+    
+    func date() -> Date {
+        switch self {
+        case .EndOfDay: return Calendar.current.startOfDay(for: Calendar.current.date(byAdding: .day, value: 1, to: Date())!)
+        case .Tomorrow: return Calendar.current.date(byAdding: .day, value: 1, to: Date())!
+        case .NextWeek: return  Calendar.current.date(byAdding: .day, value: 7, to: Date())!
+        }
+    }
+    
+    func string() -> String {
+        return Calendar.current.date(byAdding: .second, value: 10, to: Date())!.toString()
+//        return date().toString()
+    }
+}
+
 
 
 extension Dictionary where Key == String, Value == Any {
@@ -37,7 +60,7 @@ extension Dictionary where Key == String, Value == Any {
     }
     
     func toChallenge() -> Challenge? {
-        guard let id = self["id"] as? String, let playerID = self["playerID"] as? String, let challengerID = self["challengerID"] as? String, let score1 = self["score1"] as? Double, let score2 = self["score2"] as? Double, let startingDate = self["startingDate"] as? String, let endingDate = self["endingDate"] as? String  else { return nil}
+        guard let id = self["id"] as? String, let playerID = self["playerID"] as? String, let challengerID = self["challengerID"] as? String, let score1 = self["score1"] as? Double, let score2 = self["score2"] as? Double, let startingDate = self["startingDate"] as? Timestamp, let endingDate = self["endingDate"] as? Timestamp  else { return nil}
         return Challenge(id: id, playerID: playerID, challengerID: challengerID, score1: score1, score2: score2, startingDate: startingDate, endingDate: endingDate)
     }
 }
@@ -81,7 +104,7 @@ extension Player {
 
 extension Challenge {
    
-    func toDictionary() -> [String: Any]? {
+    func toDictionary() -> [String: Any] {
         return ["id": id, "playerID": playerID, "challengerID": challengerID, "score1": score1, "score2": score2, "startingDate": startingDate, "endingDate": endingDate]
     }
 }

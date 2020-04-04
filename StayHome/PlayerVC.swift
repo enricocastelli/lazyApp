@@ -43,7 +43,7 @@ class PlayerVC: UIViewController, DetailPresentable, FirestoreProvider, AlertPro
         setBarView()
         removeButton.layer.cornerRadius = 8
         challengeButton.layer.cornerRadius = 8
-        challengeButton.isHidden = true
+        //challengeButton.isHidden = true
         if let friends = player.friends {
             label.text = "\(friends.count) Friends"
         }
@@ -56,7 +56,7 @@ class PlayerVC: UIViewController, DetailPresentable, FirestoreProvider, AlertPro
 
     func animateOpening() {
         barView.alpha = 1
-        removeButton.alpha = 1
+        removeButton.isHidden = false
         challengeButton.alpha = 1
         label.alpha = 1
         expandableView.animateOpening()
@@ -65,7 +65,7 @@ class PlayerVC: UIViewController, DetailPresentable, FirestoreProvider, AlertPro
     
     func animateClosing() {
         barView.alpha = 0
-        removeButton.alpha = 0
+        removeButton.isHidden = true
         challengeButton.alpha = 0
         label.alpha = 0
         topConstraint.constant = 0

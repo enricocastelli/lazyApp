@@ -26,7 +26,7 @@ class LazyAnimalCell: UICollectionViewCell {
         super.awakeFromNib()
         contentView.layer.cornerRadius = 8
         contentView.layer.borderColor = UIColor.black.cgColor
-        contentView.layer.borderWidth = 2
+        contentView.layer.borderWidth = 1
         contentView.clipsToBounds = true
     }
 

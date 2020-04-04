@@ -59,11 +59,11 @@ class ShareView: UIView {
     private func addOptions() {
         let igBtn = UIButton()
         igBtn.setAspectRatio(1, 1)
-        igBtn.setBackgroundImage(UIImage.instagram.tint(.lightGray), for: .normal)
+        igBtn.setBackgroundImage(UIImage.instagram, for: .normal)
         stack.addArrangedSubview(igBtn)
         igBtn.addTarget(self, action: #selector(igTapped), for: .touchUpInside)
         let btn = UIButton()
-        btn.tintColor = .lightGray
+        btn.tintColor = .black
         btn.setBackgroundImage(UIImage(systemName: "paperclip"), for: .normal)
         btn.setAspectRatio(1, 1)
         stack.addArrangedSubview(btn)
